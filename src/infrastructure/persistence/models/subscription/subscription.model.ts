@@ -1,4 +1,4 @@
-import { Subscription } from '../../../domain/models/subscription/subscription.model'
+import { Subscription } from '../../../../domain/models/subscription/subscription.model'
 import mongoose, { Schema, Document } from 'mongoose';
 
 export interface SubscriptionDocument extends Document, Omit<Subscription, 'id'> {} {}

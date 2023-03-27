@@ -1,9 +1,10 @@
 import mongoose from 'mongoose';
-import { Subscription } from '../../../../domain/models/subscription/subscription.model'
-import { SubscriptionModel, SubscriptionDocument } from "../../models/subscription.model";
+import { Subscription } from '../../../domain/models/subscription/subscription.model'
+import { SubscriptionModel, SubscriptionDocument } from "../models/subscription/subscription.model";
+import { SubscriptionRepository } from '../../../domain/repositories/subscription/subscription.repository';
 
-export class MongooseSubscriptionAdapter {
-    async findById(id: string): Promise<Subscription | null> {
+export class MongooseSubscriptionRepository implements SubscriptionRepository {
+    async getById(id: string): Promise<Subscription | null> {
         const subscription = await SubscriptionModel.findById(id).exec();
         if (!subscription) {
             return null;
@@ -18,7 +19,7 @@ export class MongooseSubscriptionAdapter {
         };
     }
 
-    async find(): Promise<Array<Subscription> | []> {
+    async getAll(): Promise<Array<Subscription>> {
         const subscriptions = await SubscriptionModel.find().exec();
         if (!subscriptions) {
             return [];
@@ -30,16 +31,11 @@ export class MongooseSubscriptionAdapter {
                 startDate: subscription.startDate,
                 endDate: subscription.endDate,
                 isActive: subscription.isActive,
-                }
+            }
         })
     }
 
-    async save(subscription: Subscription): Promise<void> {
-        // @ts-ignore
-        const subscriptionDoc: SubscriptionDocument = {
-            ...subscription,
-            _id: new mongoose.Types.ObjectId(subscription.id),
-        };
-        await SubscriptionModel.create(subscriptionDoc);
+    async create(subscription: Subscription): Promise<void> {
+        await SubscriptionModel.create(subscription);
     }
 }
