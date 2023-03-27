@@ -1,7 +1,7 @@
 import { Subscription } from "../../../domain/models/subscription/subscription.model";
 import { SubscriptionRepository } from "../../../domain/repositories/subscription/subscription.repository";
 
-export class CreateSubscription {
+export class CreateSubscriptionService {
   constructor(private readonly repository: SubscriptionRepository) {
     this.repository = repository;
   }

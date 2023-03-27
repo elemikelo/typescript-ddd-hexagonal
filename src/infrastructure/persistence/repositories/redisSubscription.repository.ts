@@ -1,7 +1,7 @@
 import { SubscriptionRepository } from "../../../domain/repositories/subscription/subscription.repository";
 import { Subscription } from "../../../domain/models/subscription/subscription.model";
 
-export class RedisSubscription implements SubscriptionRepository {
+export class RedisSubscriptionRepository implements SubscriptionRepository {
     async getById(id: string): Promise<Subscription | null> {
         return null
         // TODO
