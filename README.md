@@ -1,4 +1,4 @@
-# TypeScript DDD Hexagonal Architecture Example
+# TypeScript DDD Hexagonal Architecture Example 💣
 This is a TypeScript project that follows Domain-Driven Design (DDD) principles and Hexagonal Architecture. It uses Mongoose as the database ORM and follows best practices for developing scalable and maintainable applications. The project is structured into four main layers:
 
 **Domain**: contains the business logic and entities of the application.
