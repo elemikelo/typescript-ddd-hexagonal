@@ -1,0 +1,4 @@
+services:
+  Sales.Subscriptions.application.SubscriptionCreateService:
+    class: ../../../../src/Contexts/Sales/Subscriptions/application/SubscriptionCreateService
+    arguments: ["@Sales.Subscriptions.repositories.SubscriptionRepository"]

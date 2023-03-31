@@ -7,7 +7,7 @@ This is a TypeScript project that follows Domain-Driven Design (DDD) principles 
 
 **Infrastructure**: contains the implementation details and frameworks, such as database and API connectors.
 
-**Interfaces**: contains the entry points of the application, such as REST API controllers.
+**Api**: contains the entry points of the application, such as REST API controllers.
 
 >The project includes examples for the Subscription entity, including the domain model, application service, and 
 repository interfaces and implementations. The code follows clean coding practices and includes comments and documentation to make it easy to understand and maintain.

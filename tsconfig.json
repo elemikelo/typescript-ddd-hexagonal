@@ -7,5 +7,5 @@
     "outDir": "./dist",
     "sourceMap": true
   },
-  "exclude": ["node_modules", "**/*.test.ts"]
+  "exclude": ["node_modules"]
 }

@@ -1,0 +1,4 @@
+services:
+  Sales.Subscriptions.controllers.SubscriptionCreateController:
+    class: ../../api/controllers/SubscriptionCreateController
+    arguments: ["@Sales.Subscriptions.application.SubscriptionCreateService"]

@@ -1,4 +1,4 @@
-import { Subscription } from "../domain/models/subscription.model";
+import {Subscription, SubscriptionModel} from "../domain/models/subscription.model";
 import { SubscriptionRepository } from "../domain/repositories/subscription.repository";
 
 export class CreateSubscriptionService {
@@ -7,7 +7,8 @@ export class CreateSubscriptionService {
   }
   
   async run(subscription: Subscription): Promise<void> {
-    // Aquí va toda la lógica del caso de uso
-    await this.repository.create(subscription);
+    const newSubscription = new SubscriptionModel(subscription)
+
+    await this.repository.create(newSubscription);
   }
 }
