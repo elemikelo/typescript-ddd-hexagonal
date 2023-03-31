@@ -17,6 +17,7 @@ export class FileCourseRepository implements SubscriptionRepository {
     getAll(): Promise<Array<Subscription>> {
         const subscriptions = [{
             id: '1',
+            planId: '11234',
             vehicleId: '1',
             startDate: '2021-01-01',
             endDate: '2021-01-01',
@@ -30,6 +31,7 @@ export class FileCourseRepository implements SubscriptionRepository {
         const subscription: Subscription = {
             id: '1',
             vehicleId: '1',
+            planId: '1',
             startDate: '2021-01-01',
             endDate: '2021-01-01',
             isActive: true }

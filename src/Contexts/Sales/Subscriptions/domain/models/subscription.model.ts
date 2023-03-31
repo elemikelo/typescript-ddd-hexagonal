@@ -8,6 +8,7 @@ export interface Subscription {
 
 export class SubscriptionModel implements Subscription {
     readonly id: string;
+    readonly planId: string;
     readonly vehicleId: string;
     readonly startDate: string;
     readonly endDate: string;
@@ -16,12 +17,14 @@ export class SubscriptionModel implements Subscription {
 
     constructor(params: {
         id: string,
+        planId: string,
         vehicleId: string,
         startDate: string,
         endDate: string
         isActive: boolean
     }) {
         this.id = params.id;
+        this.planId = params.planId;
         this.vehicleId = params.vehicleId;
         this.startDate = params.startDate;
         this.endDate = params.endDate;

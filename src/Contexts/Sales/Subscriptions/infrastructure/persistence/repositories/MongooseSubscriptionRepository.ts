@@ -12,6 +12,7 @@ export class MongooseSubscriptionRepository implements SubscriptionRepository {
 
         return {
             id: subscription._id.toString(),
+            planId: subscription.planId,
             vehicleId: subscription.vehicleId,
             startDate: subscription.startDate,
             endDate: subscription.endDate,
@@ -27,6 +28,7 @@ export class MongooseSubscriptionRepository implements SubscriptionRepository {
         return subscriptions.map((subscription) => {
             return {
                 id: subscription._id.toString(),
+                planId: subscription.planId,
                 vehicleId: subscription.vehicleId,
                 startDate: subscription.startDate,
                 endDate: subscription.endDate,
@@ -36,7 +38,6 @@ export class MongooseSubscriptionRepository implements SubscriptionRepository {
     }
 
     async create(subscription: Subscription): Promise<void> {
-        console.log('👀⭐️⭐️👉🏼 YEPA', { subscription })
         await SubscriptionModel.create(subscription);
     }
 }
