@@ -5,10 +5,19 @@ import { registerRoutes } from '../apps/Sales/api/routes';
 const app = express();
 const port = process.env.PORT || 3000;
 const router = Router()
-app.use(router);
-app.use(bodyParser.json());
-registerRoutes(router);
 
-app.listen(port, () => {
-    console.log(`Forest corre en el puerto:  ${port}`);
-});
+async function start () {
+    const app = express();
+    const port = process.env.PORT || 3000;
+    const router = Router()
+
+    app.use(router);
+    app.use(bodyParser.json());
+    registerRoutes(router);
+
+    app.listen(port, () => {
+        console.log(`Forest run en el puerto:  ${port}`);
+    });
+}
+
+start()

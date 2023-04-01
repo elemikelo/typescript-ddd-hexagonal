@@ -5,7 +5,7 @@ export interface PlanDocument extends Document, Omit<Plan, 'id'> {} {}
 
 const PlanSchema = new Schema<PlanDocument>({
     name: { type: String, required: true },
-    alias: { type: Date, required: true },
+    alias: { type: String, required: true },
     isOffer: { type: Boolean, required: true },
 });
 

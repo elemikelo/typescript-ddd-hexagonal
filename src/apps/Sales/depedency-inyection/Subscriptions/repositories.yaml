@@ -1,4 +1,0 @@
-services:
-  Sales.Subscriptions.domain.SubscriptionRepository:
-    class: ../../../../../src/Contexts/Sales/Subscriptions/infrastructure/repositories/FileSubscriptionRepository
-    arguments: [""]

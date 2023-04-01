@@ -1,7 +1,7 @@
-import { ContainerBuilder, YamlFileLoader } from 'node-dependency-injection';
+import { ContainerBuilder } from 'node-dependency-injection';
+import { SubscriptionContainer } from './Subscriptions/container';
 let container = new ContainerBuilder();
-let loader = new YamlFileLoader(container);
 
-loader.load(`${__dirname}/base.yaml`);
+container = SubscriptionContainer(container);
 
 export default container;

@@ -3,8 +3,8 @@ import fs from 'fs';
 import { Subscription } from "../../../domain/models/subscription.model";
 import { SubscriptionRepository } from "../../../domain/repositories/subscription.repository";
 
-export class FileCourseRepository implements SubscriptionRepository {
-    private FILE_PATH = `${__dirname}/courses`;
+export class FileSubscriptionRepository implements SubscriptionRepository {
+    private FILE_PATH = `${__dirname}/subscriptions`;
 
     async create(subscription: Subscription): Promise<void> {
         fs.promises.writeFile(this.filePath(subscription.id), BSON.serialize(subscription));

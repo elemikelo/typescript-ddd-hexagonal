@@ -1,2 +1,0 @@
-imports:
-  - { resource: ./Subscriptions/index.yaml }

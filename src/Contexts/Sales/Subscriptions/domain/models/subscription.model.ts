@@ -1,5 +1,6 @@
 export interface Subscription {
     id: string;
+    planId: string;
     vehicleId: string;
     startDate: string;
     endDate: string;

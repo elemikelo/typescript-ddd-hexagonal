@@ -7,8 +7,8 @@ export class SubscriptionCreateController implements Controller {
     constructor(private createSubscriptionService: CreateSubscriptionService) {}
 
     async run(req: Request, res: Response) {
-        const {  id, vehicleId, startDate, endDate, isActive }  = req.body;
-        const subscription: Subscription = { id, vehicleId, startDate, endDate, isActive };
+        const {  id, vehicleId, planId, startDate, endDate, isActive }  = req.body;
+        const subscription: Subscription = { id, planId, vehicleId, startDate, endDate, isActive };
 
         try {
             await this.createSubscriptionService.run(subscription);
