@@ -36,6 +36,7 @@ Make sure you have installed:
 ### Installation 🔧
 1. Clone this repository.
 2. Install dependencies:
+> npm install
 
 ### Usage 📦
 To start the project, use the following command:
