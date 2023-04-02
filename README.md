@@ -20,6 +20,48 @@ The Lead bounded context contains modules and entities related to lead generatio
 ## Folder Structure 📂
 In the root of the project, alongside the bounded contexts, there is a folder called apps that aggregates all the project configuration.
 
+```
+src
+├── Contexts
+│   ├── Lead
+│   │   └── Plans
+│   │       ├── application
+│   │       ├── domain
+│   │       └── infrastructure
+│   ├── Retention
+│   │   └── Vehicles
+│   │       ├── application
+│   │       ├── domain
+│   │       └── infrastructure
+│   ├── Sales
+│   │   ├── Shared
+│   │   ├── Subscriptions
+│   │   │   ├── application
+│   │   │   ├── domain
+│   │   │   └── infrastructure
+│   │   └── Vehicles
+│   │       ├── application
+│   │       ├── domain
+│   │       └── infrastructure
+│   └── Shared
+├── apps
+│   └── Sales
+│       ├── api
+│       │   ├── controllers
+│       │   └── routes
+│       └── depedency-inyection
+│           ├── Subscriptions
+│           └── index.ts
+├── server
+│   └── server.ts
+└── tests
+    └── Contexts
+        ├── Lead
+        ├── Retention
+        └── Sales
+            └── Subscriptions
+```
+
 ## Dependency Injection 💉
 The *node-dependencies-injection* module has been used for dependency injection. This module allows managing object 
 creation and its relationship with other objects, making it easier to manage dependencies between different modules and layers of the application.
